@@ -1,0 +1,61 @@
+Example Execution #1 (sides are displayed in order input):
+
+Enter length of side #1 -> 20
+Enter length of side #2 -> 17.5
+Enter length of side #3 -> 24.5
+Enter length of side #4 -> 21
+
+Largest possible triangle area: 201.19
+Side values used: 20.0, 24.5, 21.0
+
+Smallest possible triangle area: 161.95
+Side values used: 20.0, 17.5, 21.0
+
+Example Execution #2:
+
+Enter length of side #1 -> 20
+Enter length of side #2 -> 15
+Enter length of side #3 -> 25
+Enter length of side #4 -> 20
+
+Largest possible triangle area: 195.16
+Side values used: 20.0, 25.0, 20.0
+
+Smallest possible triangle area: 139.05
+Side values used: 20.0, 15.0, 20.0
+
+
+Example Execution #3 (use of 200 is not possible as the sum of two sides cannot be less than or equal to the third):
+
+Enter length of side #1 -> 34
+Enter length of side #2 -> 22
+Enter length of side #3 -> 200
+Enter length of side #4 -> 27
+
+Largest possible triangle area: 296.66
+Side values used: 34.0, 22.0, 27.0
+
+Smallest possible triangle area: 296.66
+Side values used: 34.0, 22.0, 27.0
+
+
+Example Execution #4:
+Enter length of side #1 -> 100
+Enter length of side #2 -> 500
+Enter length of side #3 -> 25
+Enter length of side #4 -> 400
+
+Error: No triangles can be created from lengths given!
+
+
+Example Execution #5:
+Enter length of side #1 -> 30
+Enter length of side #2 -> 29
+Enter length of side #3 -> 30
+Enter length of side #4 -> 30
+
+Largest possible triangle area: 389.71
+Side values used: 30.0, 30.0, 30.0
+
+Smallest possible triangle area: 380.81
+Side values used: 30.0, 29.0, 30.0
