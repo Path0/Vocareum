@@ -109,7 +109,11 @@ int daysLeftInMonth(int month, int day, int isLeapYear)
   dec = (month == 12);
 
 
-  if(jan || mar || may || jul || aug || oct || dec)
+  if(day == 0)
+  {
+    daysLeft = -1;
+  }
+  else if(jan || mar || may || jul || aug || oct || dec)
   {
     daysLeft = 31 - day;
   } 
@@ -141,12 +145,73 @@ int daysLeftInYear(int month, int day, int isLeapYear)
   int daysLeft;
   daysLeft = daysLeftInMonth(month, day, isLeapYear);
 
-  month++;
 
-  while(month <= 12){
-    daysLeft += daysLeftInMonth(month, 0, isLeapYear);
+  if(month < 2)
+  {
+    daysLeft += daysLeftInMonth(2, 1, isLeapYear) + 1;
+  }
+
+  if(month < 3)
+  {
+    daysLeft += daysLeftInMonth(3, 1, isLeapYear) + 1;
+  }
+
+  if(month < 4)
+  {
+    daysLeft += daysLeftInMonth(4, 1, isLeapYear) + 1;
+  }
+
+  if(month < 5)
+  {
+    daysLeft += daysLeftInMonth(5, 1, isLeapYear) + 1;
+  }
+
+  if(month < 6)
+  {
+    daysLeft += daysLeftInMonth(6, 1, isLeapYear) + 1;
+  }
+
+  if(month < 7)
+  {
+    daysLeft += daysLeftInMonth(7, 1, isLeapYear) + 1;
+  }
+
+  if(month < 8)
+  {
+    daysLeft += daysLeftInMonth(8, 1, isLeapYear) + 1;
+  }
+
+  if(month < 9)
+  {
+    daysLeft += daysLeftInMonth(9, 1, isLeapYear) + 1;
+  }
+
+  if(month < 10)
+  {
+    daysLeft += daysLeftInMonth(10, 1, isLeapYear) + 1;
+  }
+
+  if(month < 11)
+  {
+    daysLeft += daysLeftInMonth(11, 1, isLeapYear) + 1;
+  }
+
+   if(month < 12)
+  {
+    daysLeft += daysLeftInMonth(12, 1, isLeapYear) + 1;
+  }
+
+
+  /*
+  this would have been so easy...
+
+  month++;
+  while(month <= 12)
+  {
+    daysLeft += daysLeftInMonth(month, 1, isLeapYear) + 1;
     month++;
   }
+  */
 
 
   return daysLeft;  
@@ -178,7 +243,7 @@ int isALeapYear(int year)
 
 void outputs(int daysLeftInMonth, int daysLeftInYear)
 {
-  if((daysLeftInMonth == -1) || (daysLeftInYear < 0) || (daysLeftInMonth < 0) || (daysLeftInMonth > 30)) 
+  if((daysLeftInMonth == -1) || (daysLeftInYear < 0) || (daysLeftInMonth <= 0) || (daysLeftInMonth > 30)) 
   {
     printf("\nError: Date entered is not valid!\n");
   }
