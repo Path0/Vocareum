@@ -1,0 +1,1 @@
+gcc hw04.c && a.exe
