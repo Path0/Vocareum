@@ -24,27 +24,28 @@ void outputs(int, int);
 
 int main()
 {
-  int inputDate;
-  int month;
-  int day;
-  int year;
+  int inputDate; // date the user inputs
+  int month; // month from the user inputted date
+  int day; // day from the user inputted date
+  int year; // year from the user inputted date
 
-  int isLeapYear;
+  int isLeapYear; // is true if the year is a leap year
   
-  int daysLeftMonth;
-  int daysLeftYear;
+  int daysLeftMonth; // stores the days left in the month
+  int daysLeftYear; // stores the days left in the year
   
-  
-
+  // gets user input
   inputDate = input();
 
   parseInput(inputDate, &month, &day, &year);
 
   isLeapYear = isALeapYear(year);
-
+  
+  // calculations
   daysLeftMonth = daysLeftInMonth(month, day, isLeapYear);
   daysLeftYear = daysLeftInYear(month, day, isLeapYear);
 
+  // prints outputs to command window
   outputs(daysLeftMonth, daysLeftYear);
 
   return 0;
@@ -181,7 +182,6 @@ int daysLeftInMonth(int month, int day, int isLeapYear)
   nov = (month == 11);
   dec = (month == 12);
 
-
   // there isn't a 0th day in any month so set it to -1 as an error code if this happens
   if(day == 0)
   {
@@ -289,11 +289,10 @@ int daysLeftInYear(int month, int day, int isLeapYear)
     daysLeft += daysLeftInMonth(11, 1, isLeapYear) + 1;
   }
 
-   if(month < 12)
+  if(month < 12)
   {
     daysLeft += daysLeftInMonth(12, 1, isLeapYear) + 1;
   }
-
 
   /*
   this would have been so easy...
@@ -305,7 +304,6 @@ int daysLeftInYear(int month, int day, int isLeapYear)
     month++;
   }
   */
-
 
   return daysLeft;  
 }
