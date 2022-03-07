@@ -243,7 +243,7 @@ int isALeapYear(int year)
 
 void outputs(int daysLeftInMonth, int daysLeftInYear)
 {
-  if((daysLeftInMonth == -1) || (daysLeftInYear < 0) || (daysLeftInMonth <= 0) || (daysLeftInMonth > 30)) 
+  if((daysLeftInMonth == -1) || (daysLeftInYear < 0) || (daysLeftInMonth < 0) || (daysLeftInMonth > 30)) 
   {
     printf("\nError: Date entered is not valid!\n");
   }
