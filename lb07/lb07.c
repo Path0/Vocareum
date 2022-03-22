@@ -54,11 +54,11 @@ int main()
 
   if(win)
   {
-    printf("\nDealer wins!");
+    printf("\nDealer wins!\n");
   }
   else
   {
-    printf("\nDealer holds.");
+    printf("\nDealer holds.\n");
   }
 
 
@@ -151,7 +151,7 @@ void calculateTotal(int *total, int cardValue, int *num11Aces, int *hold, int *w
   {
     *total += cardValue;
   }
-
+  printf("%d", total);
   if(*total >= 21)
   {
     *hold = 1;
