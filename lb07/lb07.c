@@ -144,7 +144,7 @@ void printCardSuit(int card)
 
 void calculateTotal(int *total, int cardValue, int *num11Aces, int *hold, int *win)
 {
-  printf("%d", *num11Aces)
+  printf("%d", *num11Aces);
   if((*total + cardValue > 21) && (*num11Aces != 0)) // if the value would be over 21 and there is an ace
   {
     *total += cardValue;
