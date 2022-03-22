@@ -165,8 +165,6 @@ void calculateTotal(int *total, int cardValue, int *num11Aces, int *hold, int *w
   {
     *win = 1;
   }
-
-  printf("%d", *num11Aces);
 }
 
 void printNominals(int num) 
