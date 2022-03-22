@@ -31,19 +31,19 @@ int main()
 
   printf("\n");
 
-  cardLogic(&total, &num11Aces, &hold, &win, &total, &cardNumber);
+  cardLogic(&card, &num11Aces, &hold, &win, &total, &cardNumber);
   if((total < 16) && (hold == 0))
   {
-    cardLogic(&total, &num11Aces, &hold, &win, &total, &cardNumber);
+    cardLogic(&card, &num11Aces, &hold, &win, &total, &cardNumber);
     if((total < 16) && (hold == 0))
     {
-      cardLogic(&total, &num11Aces, &hold, &win, &total, &cardNumber);
+      cardLogic(&card, &num11Aces, &hold, &win, &total, &cardNumber);
       if((total < 16) && (hold == 0))
       {
-        cardLogic(&total, &num11Aces, &hold, &win, &total, &cardNumber);
+        cardLogic(&card, &num11Aces, &hold, &win, &total, &cardNumber);
         if((total < 16) && (hold == 0))
         {
-          cardLogic(&total, &num11Aces, &hold, &win, &total, &cardNumber);
+          cardLogic(&card, &num11Aces, &hold, &win, &total, &cardNumber);
         }
       }
     }
