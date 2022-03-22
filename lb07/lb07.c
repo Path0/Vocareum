@@ -38,7 +38,7 @@ int main()
 
     if(hold) // if the total is too high don't print anything
     {
-      continue;
+      //continue;
     }
 
     printf("The ");
@@ -150,6 +150,7 @@ void calculateTotal(int *total, int cardValue, int *num11Aces, int *hold, int *w
   {
     *total += cardValue;
   }
+  
   if(*total >= 21)
   {
     *hold = 1;
