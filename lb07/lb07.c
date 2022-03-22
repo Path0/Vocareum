@@ -6,6 +6,7 @@ void printCardName(int);
 void printCardSuit(int);
 void calculateTotal(int*, int, int*, int*, int*);
 void printNominals(int);
+void cardLogic(int*, int*, int*, int*, int*, int*);
 int main()
 {
 
@@ -30,6 +31,26 @@ int main()
   win = 0;
 
   printf("\n");
+
+  cardLogic(&total, &num11Aces, &hold, &win, &total, &cardNumber);
+  if((total < 16) && (hold == 0))
+  {
+    cardLogic(&total, &num11Aces, &hold, &win, &total, &cardNumber);
+    if((total < 16) && (hold == 0))
+    {
+      cardLogic(&total, &num11Aces, &hold, &win, &total, &cardNumber);
+      if((total < 16) && (hold == 0))
+      {
+        cardLogic(&total, &num11Aces, &hold, &win, &total, &cardNumber);
+        if((total < 16) && (hold == 0))
+        {
+          cardLogic(&total, &num11Aces, &hold, &win, &total, &cardNumber);
+        }
+      }
+    }
+  }
+
+/*
   while((total < 16) && (hold == 0) && (cardNumber <= 5))
   {
     card = rand() % (52);
@@ -51,6 +72,7 @@ int main()
 
     cardNumber++;
   }
+  */
 
   if(win)
   {
@@ -204,4 +226,23 @@ void printNominals(int num)
     default:
       break;
   }
+}
+
+void cardLogic(int *card, int *num11Aces, int *hold, int *win, int *total, int *cardNumber)
+{
+  int currentCardValue;
+
+  *card = rand() % (52);
+  currentCardValue = cardValue(*card, num11Aces);
+  calculateTotal(total, currentCardValue, num11Aces, hold, win);
+
+  printf("The ");
+  printNominals(*cardNumber);
+  printf(" card is #: %d (", (*card + 1));
+  printCardName(*card);
+  printf(" of ");
+  printCardSuit(*card);
+  printf(") Current score: %d\n", *total);
+
+  *cardNumber++;
 }
