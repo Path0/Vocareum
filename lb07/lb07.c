@@ -30,7 +30,7 @@ int main()
   win = 0;
 
   printf("\n");
-  while((total < 17) && (hold == 0))
+  while((total < 16) && (hold == 0))
   {
     card = rand() % (52);
     currentCardValue = cardValue(card, &num11Aces);
