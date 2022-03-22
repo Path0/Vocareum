@@ -56,6 +56,10 @@ int main()
   {
     printf("\nDealer wins!\n");
   }
+  else if(total > 21)
+  {
+    printf("\nDealer busts.\n");
+  }
   else
   {
     printf("\nDealer holds.\n");
