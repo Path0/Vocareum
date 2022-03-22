@@ -18,7 +18,6 @@ int main()
   int card;
   int total;
   int cardNumber;
-  int currentCardValue;
 
   printf("Enter the seed value -> ");
   scanf("%d", &seed);  
@@ -244,5 +243,5 @@ void cardLogic(int *card, int *num11Aces, int *hold, int *win, int *total, int *
   printCardSuit(*card);
   printf(") Current score: %d\n", *total);
 
-  *cardNumber++;
+  *cardNumber += 1;
 }
