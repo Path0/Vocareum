@@ -78,7 +78,7 @@ int cardValue(int card, int *num11Aces)
   if(cardTemp == 0) // deals with aces
   {
     value = 11; 
-    *num11Aces += 1;
+    *num11Aces = 1;
   }
   else if(cardTemp > 9) // deals with face cards
   {
