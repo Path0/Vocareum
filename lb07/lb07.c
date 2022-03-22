@@ -145,7 +145,6 @@ void calculateTotal(int *total, int cardValue, int *num11Aces, int *hold, int *w
     *total += cardValue;
     *total -= 10; // turns the 11 ace into a 1 ace
     *num11Aces -= 1; // the number of usable aces goes down 1
-    *hold = 1;
   }
   else
   {
