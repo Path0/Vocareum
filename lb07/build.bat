@@ -1,0 +1,1 @@
+gcc lb07.c && a.exe
