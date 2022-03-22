@@ -150,7 +150,6 @@ void calculateTotal(int *total, int cardValue, int *num11Aces, int *hold, int *w
   {
     *total += cardValue;
   }
-  printf("%d", *total);
   if(*total >= 21)
   {
     *hold = 1;
