@@ -14,16 +14,32 @@ int main()
   
 
   outputs(changes(&sequence));
-  
+
   return 0;
 }
 
 long inputs()
 {
   long sequence;
+  int length;
+  int x;
+  int sequenceCopy;
+
   printf("Enter the initial configuration -> ");
   scanf("%ld", &sequence);
   printf("\n");
+  
+  // check inputs for anything but 1 and 2
+  sequenceCopy = sequence;
+  length = log10(sequenceCopy) + 1;
+  for(x = 0; x < length; x++)
+  {
+    if(!(sequenceCopy % 10 == 1) && (sequenceCopy % 10 == 2))
+    {
+      printf("Error! Input must contain only digits 1 and 2!\n");
+      sequence = inputs();
+    }
+  }
   return sequence;
 }
 
@@ -42,7 +58,7 @@ int changes(long *sequence)
   currentNumber = (*sequence % 10) - 1;
   previousNumber = !currentNumber;
 
-  for(x = 2; x <= length + 1; x++)
+  for(x = 0; x < length; x++)
   {
     currentNumber = (*sequence % 10) - 1;
     //printf("\n%d\n", *sequence);
