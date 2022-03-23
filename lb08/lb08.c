@@ -24,6 +24,7 @@ long inputs()
   int length;
   int x;
   int sequenceCopy;
+  int error;
 
   printf("Enter the initial configuration -> ");
   scanf("%ld", &sequence);
@@ -32,14 +33,33 @@ long inputs()
   // check inputs for anything but 1 and 2
   sequenceCopy = sequence;
   length = log10(sequenceCopy) + 1;
+
   for(x = 0; x < length; x++)
   {
     if((sequenceCopy % 10 != 1) && (sequenceCopy % 10 != 2))
     {
-      printf("Error! Input must contain only digits 1 and 2!\n");
-      sequence = inputs();
+      error = 1;
     }
   }
+  while(error)
+  {
+    printf("Error! Input must contain only digits 1 and 2!\n");
+    error = 0;
+
+    printf("Enter the initial configuration -> ");
+    scanf("%ld", &sequence);
+    printf("\n");
+
+    for(x = 0; x < length; x++)
+    {
+      if((sequenceCopy % 10 != 1) && (sequenceCopy % 10 != 2))
+      {
+        error = 1;
+      }
+    }
+    
+  }
+  
   return sequence;
 }
 
