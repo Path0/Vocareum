@@ -61,7 +61,7 @@ void inputs(int *odds, int *startingNumber, int *endingNumber)
 {
   printf("Enter 0 for even or 1 for odd values -> ");
   scanf("%d", odds);
-  
+
   while((*odds != 0) && (*odds != 1))
   {
     printf("\nError! Select a valid option!!\n\n");
@@ -86,7 +86,7 @@ void inputs(int *odds, int *startingNumber, int *endingNumber)
 
   while(*endingNumber <= *startingNumber)
   {
-    printf("Error! Ending value must be > %d", *startingNumber);
+    printf("\nError! Ending value must be > %d\n\n", *startingNumber);
 
     printf("Enter ending value -> ");
     scanf("%d", endingNumber);
