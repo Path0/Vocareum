@@ -9,12 +9,12 @@ int main()
   int odds;
   int startingNumber;
   int endingNumber;
-
+  int x;
   int currentBoilerNumber;
 
   inputs(&odds, &startingNumber, &endingNumber);
 
-  for(int x = startingNumber; x <= endingNumber; x++)
+  for(x = startingNumber; x <= endingNumber; x++)
   {
     currentBoilerNumber = boilerNumber(x);
 
