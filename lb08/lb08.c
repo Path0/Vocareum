@@ -34,7 +34,7 @@ long inputs()
   length = log10(sequenceCopy) + 1;
   for(x = 0; x < length; x++)
   {
-    if(!(sequenceCopy % 10 == 1) && (sequenceCopy % 10 == 2))
+    if((sequenceCopy % 10 != 1) && (sequenceCopy % 10 != 2))
     {
       printf("Error! Input must contain only digits 1 and 2!\n");
       sequence = inputs();
