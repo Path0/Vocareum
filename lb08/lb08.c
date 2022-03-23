@@ -40,6 +40,7 @@ long inputs()
     {
       error = 1;
     }
+    sequenceCopy /= 10;
   }
   while(error)
   {
@@ -50,12 +51,14 @@ long inputs()
     scanf("%ld", &sequence);
     printf("\n");
 
+    sequenceCopy = sequence;
     for(x = 0; x < length; x++)
     {
       if((sequenceCopy % 10 != 1) && (sequenceCopy % 10 != 2))
       {
         error = 1;
       }
+      sequenceCopy /= 10;
     }
     
   }
