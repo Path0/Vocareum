@@ -1,0 +1,1 @@
+gcc lb08.c && a.exe
