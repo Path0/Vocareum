@@ -35,6 +35,8 @@ int main()
   int hold; // used as boolean, is true if the dealer holds
   int win; // used as boolean, is true if the dealer wins
 
+  inputs();
+  
   // sets up initial values
   total = 0;
   cardNumber = 1;
