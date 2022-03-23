@@ -36,7 +36,7 @@ int main()
   int win; // used as boolean, is true if the dealer wins
 
   inputs();
-  
+
   // sets up initial values
   total = 0;
   cardNumber = 1;
@@ -73,6 +73,7 @@ void inputs()
 
   // get user input
   printf("Enter the seed value -> ");
+
   scanf("%d", &seed);
   srand(seed);
 }
@@ -193,8 +194,8 @@ void cardLogic(int *card, int *num11Aces, int *hold, int *win, int *total, int *
 ******+*-*-*--**-*------*-*-***-*---**-*****--*****************************/
 int cardValue(int card, int *num11Aces)
 {
-  int value;
-  int cardTemp;
+  int value; // value of the current card
+  int cardTemp; // temporary variable to store card % 13 since suit doesn't matter in this case
 
   cardTemp = card % 13; //suit doesn't matter here
   if(cardTemp == 0) // deals with aces
