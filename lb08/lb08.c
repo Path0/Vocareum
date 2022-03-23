@@ -22,9 +22,6 @@ int main()
 long inputs()
 {
   long sequence;
-  int length;
-  int x;
-  int sequenceCopy;
   int error;
 
   printf("Enter the initial configuration -> ");
