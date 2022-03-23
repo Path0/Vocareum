@@ -29,7 +29,6 @@ long inputs()
   printf("\n");
 
   error = checkInput(sequence);
-  printf("%d\n", error);
 
   while(error)
   {
