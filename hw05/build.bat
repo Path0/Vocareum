@@ -1,1 +1,1 @@
-gcc hw.5.c && a.exe
+gcc hw05.c && a.exe
