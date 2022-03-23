@@ -14,6 +14,8 @@ int main()
   
 
   outputs(changes(&sequence));
+  
+  return 0;
 }
 
 long inputs()
