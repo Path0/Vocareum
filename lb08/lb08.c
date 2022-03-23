@@ -99,13 +99,11 @@ int changes(long *sequence)
 
     if(currentNumber == previousNumber)
     {
-      printf("%d - %d\n", currentNumber, previousNumber);
       numChanges++;
       previousNumber = !previousNumber;
     }
     else
     {
-      printf("%d - %d\n", currentNumber, previousNumber);
       previousNumber = currentNumber;
     }
 
@@ -135,13 +133,11 @@ int changes(long *sequence)
 
     if(currentNumber == previousNumber)
     {
-      printf("%d - %d\n", currentNumber, previousNumber);
       numReverseChanges++;
       previousNumber = !previousNumber;
     }
     else
     {
-      printf("%d - %d\n", currentNumber, previousNumber);
       previousNumber = currentNumber;
     }
 
