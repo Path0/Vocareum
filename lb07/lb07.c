@@ -124,7 +124,6 @@ void dealCards(int *card, int *num11Aces, int *hold, int *win, int *total, int *
     }
   }
 
-   
   // it would have been so easy...
   // while((total < 16) && (hold == 0) && (cardNumber <= 5))
   // {
