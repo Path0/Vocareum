@@ -49,7 +49,7 @@ long inputs()
 int checkInput(long seq)
 {
   int invalid;
-  int sequence;
+  long sequence;
   int length;
   int x;
   int currentNumber;
