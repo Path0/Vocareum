@@ -212,7 +212,6 @@ int cardValue(int card, int *num11Aces)
     value = cardTemp + 1;
   }
 
-
   return value;
 }
 
