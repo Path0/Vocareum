@@ -81,6 +81,10 @@ int changes(long *sequence)
   int x;
   int previousNumber;
   int currentNumber;
+  int seqReverse;
+  int seqCopy;
+  int lastDigit;
+  int numReverseChanges;
 
   numChanges = 0;
 
@@ -92,21 +96,64 @@ int changes(long *sequence)
   for(x = 0; x < length; x++)
   {
     currentNumber = (*sequence % 10) - 1;
-    //printf("\n%d\n", *sequence);
 
     if(currentNumber == previousNumber)
     {
+      printf("%d - %d\n", currentNumber, previousNumber);
       numChanges++;
       previousNumber = !previousNumber;
     }
     else
     {
+      printf("%d - %d\n", currentNumber, previousNumber);
       previousNumber = currentNumber;
     }
 
     *sequence /= 10;
     
   }
+
+  //check it the other way, front to back
+  // https://medium.com/@ManBearPigCode/how-to-reverse-a-number-mathematically-97c556626ec6
+
+  seqCopy = *sequence;
+  seqReverse = 0;
+  numReverseChanges = 0;
+
+  for(x = 0; x < length; x++)
+  {
+    lastDigit = seqCopy % 10;
+    seqReverse = (seqReverse * 10) + lastDigit;
+  }
+
+  currentNumber = (seqReverse % 10) - 1;
+  previousNumber = !currentNumber;
+
+  for(x = 0; x < length; x++)
+  {
+    currentNumber = (seqReverse % 10) - 1;
+
+    if(currentNumber == previousNumber)
+    {
+      printf("%d - %d\n", currentNumber, previousNumber);
+      numReverseChanges++;
+      previousNumber = !previousNumber;
+    }
+    else
+    {
+      printf("%d - %d\n", currentNumber, previousNumber);
+      previousNumber = currentNumber;
+    }
+
+    seqReverse /= 10;
+    
+  }
+
+  if(numReverseChanges < numChanges)
+  {
+    numChanges = numReverseChanges;
+  }
+
   
   return numChanges;
 }
