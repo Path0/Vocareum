@@ -75,7 +75,7 @@ void printNumbers(int odds, int startingNumber, int endingNumber)
 
     if((endingNumber - startingNumber) == 1) // if theyre consecutive then don't do anything just stop the loop and keep going
     {
-      break;
+      continue;
     }
 
     if(odds)
