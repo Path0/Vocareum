@@ -14,19 +14,27 @@ int main()
 
   inputs(&odds, &startingNumber, &endingNumber);
 
-  if(odds)
+  if((endingNumber - startingNumber) != 1)
   {
-    printf("\nOdd Boiler numbers: ");
+    if(odds)
+    {
+      printf("\nOdd Boiler numbers: ");
+    }
+    else
+    {  
+      printf("\nEven Boiler numbers: ");
+    }
   }
-  else
-  {
-    
-    printf("\nEven Boiler numbers: ");
-  }
+  
 
   for(x = startingNumber; x <= endingNumber; x++)
   {
     currentBoilerNumber = boilerNumber(x);
+
+    if((endingNumber - startingNumber) == 1)
+    {
+      break;
+    }
 
     if(odds)
     {
@@ -44,6 +52,36 @@ int main()
     }
     
   }
+
+  if((endingNumber - startingNumber) == 1)
+  {
+    currentBoilerNumber = boilerNumber(startingNumber);
+    if(odds)
+    {
+      if(currentBoilerNumber % 2 == 1)
+      {
+        printf("\nOdd Boiler numbers: ");
+        printf("%d ", currentBoilerNumber);
+      }
+      else
+      {
+        printf("\nError: No values generated.");
+      }
+    }
+    else
+    {
+      if(currentBoilerNumber % 2 == 0)
+      {
+        printf("\nEven Boiler numbers: ");
+        printf("%d ", currentBoilerNumber);
+      }
+      else
+      {
+        printf("\nError: No values generated.");
+      }
+    }
+  }
+
   printf("\n");
   return 0;
 }
