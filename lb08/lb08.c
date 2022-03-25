@@ -12,7 +12,6 @@
 *
 ******+*****--*****---*---*-***-----**-*****--*****************************/
 
-
 #include <stdio.h>
 #include <math.h>
 
@@ -23,10 +22,10 @@ void outputs(int);
 
 int main()
 {
-  long sequence;
+  long sequence; // sequence to analyze
 
   sequence = inputs();
-  outputs(changes(&sequence));
+  outputs(changes(&sequence)); // changes gives the number of changes required, outputs takes in the number of changes required. Why waste a filler variable when you could just do this
 
   return 0;
 }
