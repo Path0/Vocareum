@@ -17,8 +17,8 @@ void outputs(double, double, int*);
 int main()
 {
   int data[ARRAY_SIZE];
-  int meanValue;
-  int stdev;
+  double meanValue;
+  double stdev;
 
   input();
   fillData(data);
