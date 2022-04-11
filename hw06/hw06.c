@@ -110,7 +110,7 @@ void outputs(double mean, double stdev, int* data)
   for(x = 0; x < ARRAY_SIZE; x++)
   {
     currentValue = getValue(data, x);
-    if(abs(currentValue - mean) < stdev)
+    if(currentValue - mean < (-1 * stdev))
     {
       printf("%d ", currentValue);
     }
@@ -121,7 +121,7 @@ void outputs(double mean, double stdev, int* data)
   for(x = 0; x < ARRAY_SIZE; x++)
   {
     currentValue = getValue(data, x);
-    if(abs(currentValue - mean) > (stdev))
+    if(currentValue - mean > stdev)
     {
       printf("%d ", currentValue);
     }
