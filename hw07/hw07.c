@@ -131,7 +131,7 @@ void largestValues(int *array)
   int index;
 
   printf("\nLargest 5 values in data: ");
-  for(index = ARRAY_SIZE - 1; index >= ARRAY_SIZE - 6; index--)
+  for(index = ARRAY_SIZE - 1; index >= ARRAY_SIZE - 5; index--)
   {
     printf("%d ", getValue(array, index));
   }
