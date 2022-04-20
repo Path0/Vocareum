@@ -1,0 +1,1 @@
+gcc hw07.c && a.exe
