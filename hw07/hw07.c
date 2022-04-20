@@ -75,7 +75,7 @@ int sortInt(int number)
   bubbleSort(digits, size);
 
   // sorted number is just the digit times 10^index value added together
-  for(int index = size - 1; index >= 0; index--)
+  for(index = size - 1; index >= 0; index--)
   {
     sortedNumber += getValue(digits, index) * pow(10, index);
   }
