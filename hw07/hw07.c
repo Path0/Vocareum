@@ -36,8 +36,16 @@ void getSeed()
 {
   int seed;
 
-  printf("Enter seed value -> ");
-  scanf("%d", &seed);
+  do
+  {
+    printf("Enter seed value -> ");
+    scanf("%d", &seed);
+
+    if(seed <= 0)
+    {
+      printf("\nError! Positive seed values only!!\n");
+    }
+  } while(seed <= 0);
 
   srand(seed);
 }
@@ -45,6 +53,23 @@ void getSeed()
 int getRange()
 {
   int range;
+
+  do
+  {
+    printf("Enter seed value -> ");
+    scanf("%d", &range);
+
+    if(range > 8)
+    {
+      printf("\nError! Power of ten cannot exceed eight!\n");
+    }
+    
+    if(range <= 0)
+    {
+      printf("\nError! Power of ten must be positive!\n");
+    }
+    
+  } while((range > 8) || (range <= 0));
 
   printf("Enter maximum power of ten for range -> ");
   scanf("%d", &range);
@@ -135,7 +160,7 @@ void largestValues(int *array)
   {
     printf("%d ", getValue(array, index));
   }
-  printf("\n");
+  //printf("\n");
 }
 
 void smallestValues(int *array)
