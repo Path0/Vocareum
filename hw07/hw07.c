@@ -41,7 +41,7 @@ void getSeed()
 
     if(seed <= 0)
     {
-      printf("\nError! Positive seed values only!!\n");
+      printf("\nError! Positive seed values only!!\n\n");
     }
 
   } while(seed <= 0);
@@ -60,7 +60,7 @@ int getRange()
 
     if(range > 8)
     {
-      printf("\nError! Power of ten cannot exceed eight!\n");
+      printf("\nError! Power of ten cannot exceed eight!\n\n");
     }
     
     if(range <= 0)
