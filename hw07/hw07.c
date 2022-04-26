@@ -229,9 +229,6 @@ int findMax(int number, int *maxLocation)
   return max;
 }
 
-
-
-
 // if only we could have used dynamic arrays...
 
 // int sortInt(int number)
