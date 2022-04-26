@@ -70,7 +70,7 @@ int getRange()
     
     if(range <= 0)
     {
-      printf("\nError! Power of ten must be positive!!\n");
+      printf("\nError! Power of ten must be positive!!\n\n");
     }
     
   } while((range > 8) || (range <= 0));
